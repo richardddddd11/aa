@@ -1,0 +1,75 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Angelly 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #d63384;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .heart {
+            font-size: 3em;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .btn {
+            font-size: 1.5em;
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #d63384;
+        }
+        .no-btn {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveButton() {
+            let btn = document.getElementById("no-btn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            btn.style.left = `${x}px`;
+            btn.style.top = `${y}px`;
+        }
+        function showMessage() {
+            alert('¡Muchas gracias por querer pasar San Valentín conmigo! Eres la mejor novia del mundo. 💕');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>💖 Para Angelly 💖</h1>
+        <p class="heart">💓</p>
+        <p>¿Quieres ser mi San Valentín? 💘</p>
+        <button class="btn" onclick="showMessage()">💌 Sí 💌</button>
+        <button class="btn no-btn" id="no-btn" onmouseover="moveButton()">💔 No 💔</button>
+    </div>
+</body>
+</html>
